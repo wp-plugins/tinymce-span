@@ -4,7 +4,7 @@ Donate link: http://wpservicemasters.com/plugins/tinymce-span/
 Tags: tinymce, Visual Editor, span, text, text decoration, decorator, text border, text highlight, span button
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.0
+Stable tag: 1.1
 
 TinyMCE Span lets you insert HTML span tags around text like &lt;span&gt;some text like this&lt;/span&gt; in the WordPress Visual Editor via an [SPA] button. This is useful for quickly highlighting text, adding preformatted borders around text and giving text a preformatted style. The plugin's backend admin panel makes it easy to edit the CSS class TinyMCE Span uses.
 
