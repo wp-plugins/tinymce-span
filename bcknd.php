@@ -15,6 +15,7 @@ function tinymce_span_options() {
 
 global $blog_id;
 $file = WP_PLUGIN_DIR."/tinymce-span/CSS/$blog_id.prettyspan.css";
+$oldfile = WP_PLUGIN_DIR."/tinymce-span/$blog_id.prettyspan.css";
 $image = plugins_url( 'mce_plugins/plugins/span/img/icon.png', __FILE__ );
 
 if($_POST){
@@ -37,6 +38,12 @@ if($_POST)
 <h3>Style Your TinyMCE Span Tag</h3>
 <p>Use the text box to edit your &lt;span&gt; tag's CSS.</p>
 <p>Use the <img style="display: inline; border: 1px solid black;" src="<?php echo $image ?>" /> button in your TinyMCE editor to apply the &lt;span&gt; tag to elements within your posts.</p>
+
+<?php
+if (file_exists($oldfile)) {
+   echo '<p>Did you use TinMCE Span version 1.1 or under? <a href="#old-file">Click here to view your old CSS file</a></p>';
+} else {}
+?>
 
 <br />
 
@@ -160,6 +167,16 @@ font-weight: bold;
 </ul>
 <p>A good CSS reference page is available <a href="http://www.elizabethcastro.com/html/extras/cssref.html" target="_blank">here</a>.</p>
 <p>Have fun. If you have questions then please visit us at either <a href="http://wpservicemasters.com">WP Service Masters</a> or <a href="http://journalxtra.com">JournalXtra.com</a>.</p>
+
+<?php
+
+if (file_exists($oldfile)) {
+echo '<h1><a name="old-file">Old CSS File</a></h1>';
+  $oldfilecontents = file_get_contents($oldfile);
+  echo '<textarea name="newcontents" cols="70" rows="15" style="border: solid 1px black; -moz-border-radius: 10px;border-radius: 10px;">'.$oldfilecontents.'</textarea>';
+} else {}
+?>
+
 <?php
  echo '</div>';
 }

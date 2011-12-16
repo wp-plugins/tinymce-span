@@ -88,7 +88,7 @@ WordPress and web development is my livelihood. I do accept donations but I pref
 
 = 1.2 =
 
-* Removed hard coding of the wp-content directory location to add compatibility with WP installations with the directory renamed. Made various other improvements.
+* Before upgrading: visit `Settings > TinyMCE Span` to copy your current prettyspan.css file. This version removes hardcoded `wp-content` directory location to add compatibility with WP installations with that directory renamed. Made various other improvements.
 
 = 1.1 =
 
