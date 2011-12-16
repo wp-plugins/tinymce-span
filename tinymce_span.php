@@ -4,12 +4,12 @@ Plugin Name: TinyMCE Span
 Plugin URI: http://wpservicemasters.com/plugins/tinymce-span/
 Description: TinyMCE Span lets you insert HTML span tags around text like &lt;span&gt;some text like this&lt;/span&gt; in the WordPress Visual Editor via an [SPA] button. This is useful for quickly highlighting text, adding preformatted borders around text and giving text a preformatted style. The plugin's backend admin panel makes it easy to edit the CSS class TinyMCE Span uses.
 Author: WP Service Masters
-Version: 1.0
+Version: 1.1
 Author URI: http://wpservicemasters.com/plugins/tinymce-span/
 */
 
 /*
-Copyright (c) 2011 Dion de Ville, WP Servicemasters
+Copyright (c) 2011 Dion de Ville, WP Service Masters
 
 Copyright notice written by Takayuki Miyauchi
 

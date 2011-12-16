@@ -1,12 +1,12 @@
 <?php
 
-add_action('admin_menu', 'my_plugin_menu');
+add_action('admin_menu', 'tinymce_span_menu');
 
-function my_plugin_menu() {
-	add_options_page('TinyMCE Span', 'TinyMCE Span', 'manage_options', 'tiny-mce-span', 'my_plugin_options');
+function tinymce_span_menu() {
+	add_options_page('TinyMCE Span', 'TinyMCE Span', 'manage_options', 'tiny-mce-span', 'tinymce_span_options');
 }
 
-function my_plugin_options() {
+function tinymce_span_options() {
 	if (!current_user_can('manage_options'))  {
 		wp_die( __('You do not have sufficient permissions to access this page.') );
 	}
@@ -37,7 +37,7 @@ if($_POST)
 <p>TinyMCE Span adds a new button to the WordPress visual editor that lets you place text in HTML span tags. The span tag uses the class <strong>prettyspan</strong> which you can style using the text box on this page. This version of TinyMCE span lets you create only one stylized span tag. A future version will let you create multiple span classes for creating multiple text effects.</p>
 <p>TinyMCE Span is multi site safe. Each blog (or site) creates its own prettyspan class CSS file when both the plugin is activated and the blog's backend is accessed.</p>
 <p>Please be aware that this form will place anything you into it into your prettyspan.css file. Please write proper CSS only i.e no notes and no HTML or PHP. Anything that is not CSS might show in your frontend. The stylesheet is non executable so exploits shouldn't be possible.</p>
-<p>This blog's WordPress ID is blog number <strong><?php echo ''.$blog_id.''; ?></strong>. Your CSS file will be prefixed with the number <strong>1</strong> and your CSS file will be called <strong><?php echo ''.$blog_id.''; ?>.prettyspan.css</strong>. It will be stored in the directory <strong><?php echo '' . get_bloginfo('wpurl') . '/wp-content/plugins/tinymce-span/'; ?></strong></p>
+<p>This blog's WordPress ID is blog number <strong><?php echo ''.$blog_id.''; ?></strong>. Your CSS file will be prefixed with the number <strong><?php echo ''.$blog_id.''; ?></strong> and your CSS file will be called <strong><?php echo ''.$blog_id.''; ?>.prettyspan.css</strong>. It will be stored in the directory <strong><?php echo '' . get_bloginfo('wpurl') . '/wp-content/plugins/tinymce-span/'; ?></strong></p>
 
 <br />
 
